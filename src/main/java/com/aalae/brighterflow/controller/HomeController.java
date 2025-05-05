@@ -1,13 +1,14 @@
 package com.aalae.brighterflow.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 
-@RestController
+
+@Controller
 public class HomeController {
 
-    @GetMapping("/")
+    @RequestMapping("/home")
     public String home() {
-        return "🚀 Bienvenue sur BrighterFlow !";
+        return "home";  // returns a view name (home.html)
     }
 }
